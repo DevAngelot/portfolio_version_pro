@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500">
+  <rect width="900" height="500" fill="#111c33"/>
+  <rect x="70" y="70" width="760" height="360" rx="30" fill="#0b1220" stroke="#3b82f6" stroke-opacity=".55"/>
+  <text x="120" y="170" fill="#e2e8f0" font-family="system-ui, Segoe UI" font-size="28" font-weight="600">Badge</text>
+  <text x="120" y="204" fill="#93c5fd" font-family="ui-monospace, Consolas" font-size="16">achievement • proof</text>
+  <circle cx="700" cy="180" r="56" fill="#3b82f6" fill-opacity=".15" stroke="#3b82f6"/>
+  <rect x="120" y="260" width="540" height="16" rx="8" fill="#111c33" opacity=".85"/>
+  <rect x="120" y="292" width="460" height="16" rx="8" fill="#111c33" opacity=".65"/>
+  <rect x="120" y="324" width="380" height="16" rx="8" fill="#111c33" opacity=".45"/>
+</svg>

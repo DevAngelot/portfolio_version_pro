@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#111c33"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="500" fill="url(#g)"/>
+  <circle cx="160" cy="140" r="70" fill="#3b82f6" fill-opacity=".18" stroke="#3b82f6"/>
+  <text x="260" y="160" fill="#e2e8f0" font-family="system-ui, Segoe UI" font-size="28" font-weight="600">Certification</text>
+  <text x="260" y="196" fill="#93c5fd" font-family="ui-monospace, Consolas" font-size="16">badge • credential</text>
+  <rect x="100" y="260" width="700" height="16" rx="8" fill="#0f172a" opacity=".8"/>
+  <rect x="100" y="292" width="580" height="16" rx="8" fill="#0f172a" opacity=".65"/>
+  <rect x="100" y="324" width="520" height="16" rx="8" fill="#0f172a" opacity=".5"/>
+</svg>

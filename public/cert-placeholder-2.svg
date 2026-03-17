@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500">
+  <rect width="900" height="500" fill="#0b1220"/>
+  <path d="M0 420 C 200 340, 260 520, 450 420 S 720 340, 900 420" fill="none" stroke="#3b82f6" stroke-opacity=".85" stroke-width="2"/>
+  <text x="90" y="140" fill="#e2e8f0" font-family="system-ui, Segoe UI" font-size="28" font-weight="600">Credential</text>
+  <text x="90" y="174" fill="#93c5fd" font-family="ui-monospace, Consolas" font-size="16">verification • trust</text>
+  <rect x="90" y="230" width="720" height="18" rx="9" fill="#111c33"/>
+  <rect x="90" y="260" width="640" height="18" rx="9" fill="#111c33" opacity=".7"/>
+  <rect x="90" y="290" width="520" height="18" rx="9" fill="#111c33" opacity=".5"/>
+</svg>

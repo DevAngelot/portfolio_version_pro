@@ -182,20 +182,21 @@ export const education = [
     title: 'Master, Computer Software Engineering',
     org: 'ISIPA',
     period: 'Nov 2024 - Aug 2026',
-    grade: 'En cours',
-    description: 'Skills: DevOps · Conception logiciels professionnels · Développement de méthodes · Méthode de conception logiciel · Normes de conception logiciel',
+    grade: 'In Progress',
+    description: 'Skills: DevOps · Professional Software Design · Methods Development · Software Design Methodology · Software Design Standards',
   },
   {
-    title: 'Programme AWS RE/START CLOUD COMPUTING, Cloud Computing, DevOps & Linux',
+    title: 'AWS RE/START CLOUD COMPUTING Program, Cloud Computing, DevOps & Linux',
     org: 'Orange Digital Center RDC',
     period: 'Feb 2026 - May 2026',
-    description: 'Skills: Cloud computing, IAAS, PAAS, SAAS, Network Basics, Cybersecurity',
+    description: 'Skills: Cloud Computing, IAAS, PAAS, SAAS, Network Basics, Cybersecurity',
   },
   {
-    title: 'Licence, Génie logiciel',
+    title: 'Bachelor, Software Engineering',
     org: 'ISIPA',
     period: 'Oct 2021 - Aug 2024',
     grade: '71%',
+    description: 'Skills: Software Development · Object-Oriented Programming · Database Management · Web Development · Software Architecture · Algorithms & Data Structures',
   },
 ]
 

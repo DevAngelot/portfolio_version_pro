@@ -1,4 +1,6 @@
+import { useState } from 'react'
 import { ExternalLink, Github, Images } from 'lucide-react'
+import { ImageLightbox } from './ImageLightbox.jsx'
 
 function Tag({ children }) {
   return (
@@ -9,75 +11,104 @@ function Tag({ children }) {
 }
 
 export function ProjectCard({ project }) {
+  const [lightboxOpen, setLightboxOpen] = useState(false)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const cover = project.images?.[0]
 
+  const openLightbox = (index) => {
+    setCurrentImageIndex(index)
+    setLightboxOpen(true)
+  }
+
   return (
-    <article className="card overflow-hidden">
-      <div className="relative">
-        {cover ? (
-          <img
-            src={cover}
-            alt=""
-            className="h-48 w-full border-2 border-slate-200/70 object-cover opacity-95 dark:border-slate-700"
-            loading="lazy"
-          />
-        ) : (
-          <div className="flex h-48 w-full items-center justify-center border-2 border-slate-200/70 bg-slate-100 text-slate-400 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-500">
-            <Images size={22} />
-          </div>
-        )}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/10 to-transparent" />
-        <div className="absolute bottom-3 left-3 right-3">
-          <h3 className="text-lg font-semibold text-white">{project.title}</h3>
-        </div>
-      </div>
-
-      <div className="p-5">
-        <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-200">{project.description}</p>
-
-        <div className="mt-4 flex flex-wrap gap-2">
-          {project.technologies?.map((t) => (
-            <Tag key={t}>{t}</Tag>
-          ))}
-        </div>
-
-        <div className="mt-5 flex flex-wrap gap-2">
-          {project.links?.github ? (
-            <a
-              className="inline-flex items-center gap-2 text-sm font-medium text-brand-500 hover:underline"
-              href={project.links.github}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Github size={16} /> GitHub
-            </a>
-          ) : null}
-          {project.links?.demo ? (
-            <a
-              className="inline-flex items-center gap-2 text-sm font-medium text-brand-500 hover:underline"
-              href={project.links.demo}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <ExternalLink size={16} /> Demo
-            </a>
-          ) : null}
-        </div>
-
-        {project.images?.length ? (
-          <div className="mt-5 grid grid-cols-3 gap-2">
-            {project.images.slice(0, 3).map((img) => (
+    <>
+      <article className="group card overflow-hidden transition-all duration-300 hover:shadow-lg dark:hover:shadow-brand-500/10">
+        <div className="relative overflow-hidden">
+          <div className="relative bg-gradient-to-br from-white to-slate-50/50 p-4 dark:from-slate-800 dark:to-slate-900/50">
+            {cover ? (
               <img
-                key={img}
-                src={img}
-                alt=""
-                className="h-16 w-full rounded-xl border-2 border-slate-200/70 object-cover dark:border-slate-700"
+                src={cover}
+                alt={project.title}
+                className="h-48 w-full cursor-pointer rounded-lg border-2 border-slate-200/80 object-contain transition-all duration-300 group-hover:scale-105 group-hover:border-brand-400/40 dark:border-slate-700 dark:group-hover:border-brand-500/40"
                 loading="lazy"
+                onClick={() => openLightbox(0)}
               />
+            ) : (
+              <div className="flex h-48 w-full items-center justify-center rounded-lg border-2 border-slate-200/80 text-slate-400 dark:border-slate-700 dark:text-slate-500">
+                <Images size={32} />
+              </div>
+            )}
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-4 p-5">
+          <div className="space-y-2">
+            <h3 className="text-lg font-semibold leading-tight text-slate-900 transition-colors group-hover:text-brand-600 dark:text-slate-50 dark:group-hover:text-brand-400">
+              {project.title}
+            </h3>
+            <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-300">{project.description}</p>
+          </div>
+
+          <div className="flex flex-wrap gap-2">
+            {project.technologies?.map((t) => (
+              <Tag key={t}>{t}</Tag>
             ))}
           </div>
-        ) : null}
-      </div>
-    </article>
+
+          <div className="flex flex-wrap gap-3">
+            {project.links?.github && (
+              <a
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-500 transition hover:text-brand-600 hover:underline dark:text-brand-400"
+                href={project.links.github}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Github size={16} /> GitHub
+              </a>
+            )}
+            {project.links?.demo && (
+              <a
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-500 transition hover:text-brand-600 hover:underline dark:text-brand-400"
+                href={project.links.demo}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <ExternalLink size={16} /> Demo
+              </a>
+            )}
+          </div>
+
+          {project.images?.length > 1 && (
+            <div className="flex gap-2">
+              {project.images.slice(1, 4).map((img, idx) => (
+                <img
+                  key={img}
+                  src={img}
+                  alt=""
+                  className="h-16 w-16 cursor-pointer rounded-lg border-2 border-slate-200/70 object-cover transition-all hover:border-brand-400 hover:shadow-md dark:border-slate-700 dark:hover:border-brand-500"
+                  loading="lazy"
+                  onClick={() => openLightbox(idx + 1)}
+                />
+              ))}
+              {project.images.length > 4 && (
+                <div className="flex h-16 w-16 items-center justify-center rounded-lg border-2 border-slate-200/70 bg-slate-100 text-xs font-semibold text-slate-600 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-400">
+                  +{project.images.length - 4}
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      </article>
+
+      {lightboxOpen && (
+        <ImageLightbox
+          images={project.images}
+          currentIndex={currentImageIndex}
+          onClose={() => setLightboxOpen(false)}
+          onNavigate={setCurrentImageIndex}
+        />
+      )}
+    </>
   )
 }

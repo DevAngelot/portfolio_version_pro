@@ -19,10 +19,7 @@ import {
   skillGroups,
   techStackCarousel,
 } from './data/portfolio.js'
-import { useTheme } from './hooks/useTheme.js'
-
 function App() {
-  const { theme, toggleTheme } = useTheme()
 
   const {
     register,
@@ -40,22 +37,14 @@ function App() {
 
   return (
     <div className="min-h-dvh bg-grid-fade">
-      <Navbar theme={theme} onToggleTheme={toggleTheme} />
+      <Navbar />
 
       <main>
         <section id="home" className="relative overflow-hidden py-14 sm:py-20">
           <div className="container-page">
             <div className="grid items-center gap-10 lg:grid-cols-12">
               <div className="lg:col-span-7">
-                <motion.p
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  className="mb-4 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/60 px-4 py-2 text-xs font-medium text-slate-700 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300"
-                >
-                  <span className="h-2 w-2 rounded-full bg-brand-500" />
-                  DevOps Engineer • Linux System Administrator • Full Stack Developer
-                </motion.p>
+                
 
                 <motion.h1
                   initial={{ opacity: 0, y: 18 }}
@@ -224,8 +213,17 @@ function App() {
           <div className="grid gap-4 md:grid-cols-3">
             {education.map((ed) => (
               <div key={ed.title} className="card p-6">
-                <p className="text-sm font-semibold text-slate-900 dark:text-slate-50">{ed.title}</p>
-                <p className="mt-2 text-sm text-slate-600 dark:text-slate-200">{ed.org}</p>
+                <p className="text-sm font-semibold text-slate-900">{ed.title}</p>
+                <p className="mt-2 text-sm text-slate-600">{ed.org}</p>
+                {ed.period && (
+                  <p className="mt-1 text-xs text-slate-500">{ed.period}</p>
+                )}
+                {ed.grade && (
+                  <p className="mt-2 text-xs font-medium text-brand-600">Grade: {ed.grade}</p>
+                )}
+                {ed.description && (
+                  <p className="mt-3 text-xs leading-relaxed text-slate-600">{ed.description}</p>
+                )}
               </div>
             ))}
           </div>

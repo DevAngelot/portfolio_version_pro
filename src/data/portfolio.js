@@ -108,7 +108,7 @@ export const projects = [
       'A stock and transaction management POS system with an admin dashboard and core operational workflows for inventory and sales.',
     technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
     
-    images: ['/project-placeholder-3.svg', '/project-placeholder-1.svg'],
+    images: ['/project-placeholder-3.svg'],
   },
   {
     title: 'Cloud Project: AWS S3 Bucket Solution (CHR Libikisi)',
@@ -179,16 +179,23 @@ export const certifications = [
 
 export const education = [
   {
-    title: 'Master in Software Engineering (In progress)',
+    title: 'Master, Computer Software Engineering',
     org: 'ISIPA',
+    period: 'Nov 2024 - Aug 2026',
+    grade: 'En cours',
+    description: 'Skills: DevOps · Conception logiciels professionnels · Développement de méthodes · Méthode de conception logiciel · Normes de conception logiciel',
   },
   {
-    title: 'Bachelor in Software Engineering',
-    org: 'ISIPA',
+    title: 'Programme AWS RE/START CLOUD COMPUTING, Cloud Computing, DevOps & Linux',
+    org: 'Orange Digital Center RDC',
+    period: 'Feb 2026 - May 2026',
+    description: 'Skills: Cloud computing, IAAS, PAAS, SAAS, Network Basics, Cybersecurity',
   },
   {
-    title: 'AWS re/Start Program',
-    org: 'Orange Digital Center',
+    title: 'Licence, Génie logiciel',
+    org: 'ISIPA',
+    period: 'Oct 2021 - Aug 2024',
+    grade: '71%',
   },
 ]
 

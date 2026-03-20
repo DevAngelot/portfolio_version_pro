@@ -50,7 +50,7 @@ export const skillGroups = [
   },
   {
     title: 'Backend',
-    items: ['Node.js', 'Express.js', 'Goland'],
+    items: ['Node.js', 'Goland'],
   },
   {
     title: 'Frontend',
@@ -61,8 +61,8 @@ export const skillGroups = [
     items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'SQL Server'],
   },
   {
-    title: 'Systems',
-    items: ['Linux', 'Bash', 'Networking'],
+    title: ' Operating System',
+    items: ['Windows', 'Ubuntu', 'Debian', 'Amazon Linux', 'Red Hat'],
   },
   {
     title: 'Others',
@@ -83,9 +83,46 @@ export const experience = [
       'Worked in Agile environment using Git',
     ],
   },
+  {
+    role: 'Programme AWS RE/START CLOUD COMPUTING',
+    company: 'Orange Digital Center',
+    date: 'Feb . 2026 – Now',
+    location: 'Kinshasa',
+    bullets: [
+      'AWS re/Start program for becoming a cloud practionner, combined with the AWS Certified Cloud Practitioner certification.',
+      'Fundamental of networking',
+      'Fundamental of cybersecurity',
+      'Fundamental of linux',
+      'Fundamental of Python',
+      'Fundamental of DevOps',
+      'Aws re/Start Badge : En cours',
+      'References :',  
+      'MARC TSHIBANGU : Head of Orange Digital Center marc.tshibasu@orange.com ',
+      'JEAN GILBERT MBOMA : AWS Re-start Program Manager mbula.gilberto@gmail.com'
+    ],
+  }
 ]
 
+
+
+
 export const projects = [
+  {
+    title: 'Production-Ready DevOps Pipeline for a Full-Stack Application',
+    description:
+      'Designed and deployed a full-stack application using modern DevOps practices, covering the full lifecycle from infrastructure provisioning to monitoring. Key Achievements: Built a fully automated infrastructure using Terraform and Ansible on AWS EC2, Containerized the application with Docker and deployed via CI/CD pipelines (GitLab CI), Configured a secure reverse proxy with NGINX and HTTPS using Certbot, Configured a secure reverse proxy with NGINX and HTTPS using Certbot, Ensured reproducibility and scalability of the infrastructure',
+    technologies: ['AWS EC2', 'Terraform', 'Ansible', 'Docker', 'GitLab CI/CD', 'NGINX', 'Prometheus', 'Grafana', 'React.js', 'Typescript', 'Supabase'],
+    
+    images: ['/d2.png', '/d1.png', '/d3.png', '/d4.png', '/d5.png', '/d6.png', '/d7.png', '/d8.png', '/d9.png'],
+  },
+  {
+    title: 'Multi-Tier AWS Infrastructure with Terraform',
+    description:
+      'Designed and deployed a secure and scalable cloud infrastructure on AWS using Infrastructure as Code (Terraform), following best practices for networking, security, and access management. Key Features: Custom VPC with public and private subnets, Internet Gateway and NAT Gateway for controlled internet access, Secure access using AWS Systems Manager (SSM) without SSH, IAM roles configured for fine-grained permissions, Network isolation and security groups implementation',
+    technologies: ['AWS EC2', 'VPC', 'IAM', 'SSM', 'Networking', 'Security'],
+    
+    images: ['/t2.png', '/t1.png', '/t3.png', '/t4.png'],
+  },
   {
     title: 'Hospital Cash Flow Management Application',
     description:
@@ -142,7 +179,7 @@ export const certifications = [
   {
     title: 'Terraform for AWS',
     credentialUrl: 'https://www.linkedin.com/learning/certificates/0fb41548ccfeea6e97bbb9d2343546c148f2969d3319fb4ae2176425d805ba17?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B8G06rPE9QwS%2Bm4GFbzCKDw%3D%3D',
-    image: '/cert-placeholder-2.svg',
+    image: '/terraform.png',
     badge: 'Badge',
   },
   {
@@ -172,7 +209,7 @@ export const certifications = [
    {
     title: 'SQL Server Database Administration',
     credentialUrl: 'https://www.udemy.com/certificate/UC-30009aee-40e5-432f-a68d-92763e853bad/',
-    image: '/cert-placeholder-3.svg',
+    image: '/udemy.png',
     badge: 'Badge',
   },
 ]

@@ -80,7 +80,7 @@ function App() {
                   <Button as="a" href="#projects" variant="secondary">
                     View Projects
                   </Button>
-                  <Button as="a" href="/cv.pdf" variant="secondary">
+                  <Button as="a" href="/cv_angelot_mpata.pdf" variant="secondary">
                     Download CV
                   </Button>
                 </div>
@@ -201,7 +201,7 @@ function App() {
           </div>
         </Section>
 
-        <Section id="certifications" eyebrow="Proof" title="Certifications">
+        <Section id="certifications" eyebrow="Proof" title="Courses certificates">
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {certifications.map((c) => (
               <CertCard key={c.title} cert={c} />

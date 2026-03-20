@@ -4,7 +4,7 @@ import { ImageLightbox } from './ImageLightbox.jsx'
 
 function Tag({ children }) {
   return (
-    <span className="rounded-full border border-slate-200 bg-white/60 px-3 py-1 text-xs text-slate-700 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300">
+    <span className="rounded-full border border-slate-200 bg-white/60 px-3 py-1 text-xs text-slate-700">
       {children}
     </span>
   )
@@ -22,19 +22,19 @@ export function ProjectCard({ project }) {
 
   return (
     <>
-      <article className="group card overflow-hidden transition-all duration-300 hover:shadow-lg dark:hover:shadow-brand-500/10">
+      <article className="group card overflow-hidden transition-all duration-300 hover:shadow-lg">
         <div className="relative overflow-hidden">
-          <div className="relative bg-gradient-to-br from-white to-slate-50/50 p-4 dark:from-slate-800 dark:to-slate-900/50">
+          <div className="relative bg-gradient-to-br from-white to-slate-50/50 p-4">
             {cover ? (
               <img
                 src={cover}
                 alt={project.title}
-                className="h-48 w-full cursor-pointer rounded-lg border-2 border-slate-200/80 object-contain transition-all duration-300 group-hover:scale-105 group-hover:border-brand-400/40 dark:border-slate-700 dark:group-hover:border-brand-500/40"
+                className="h-48 w-full cursor-pointer rounded-lg border-2 border-slate-200/80 object-contain transition-all duration-300 group-hover:scale-105 group-hover:border-brand-400/40"
                 loading="lazy"
                 onClick={() => openLightbox(0)}
               />
             ) : (
-              <div className="flex h-48 w-full items-center justify-center rounded-lg border-2 border-slate-200/80 text-slate-400 dark:border-slate-700 dark:text-slate-500">
+              <div className="flex h-48 w-full items-center justify-center rounded-lg border-2 border-slate-200/80 text-slate-400">
                 <Images size={32} />
               </div>
             )}
@@ -44,10 +44,10 @@ export function ProjectCard({ project }) {
 
         <div className="flex flex-col gap-4 p-5">
           <div className="space-y-2">
-            <h3 className="text-lg font-semibold leading-tight text-slate-900 transition-colors group-hover:text-brand-600 dark:text-slate-50 dark:group-hover:text-brand-400">
+            <h3 className="text-lg font-semibold leading-tight text-slate-900 transition-colors group-hover:text-brand-600">
               {project.title}
             </h3>
-            <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-300">{project.description}</p>
+            <p className="text-sm leading-relaxed text-slate-600">{project.description}</p>
           </div>
 
           <div className="flex flex-wrap gap-2">
@@ -59,7 +59,7 @@ export function ProjectCard({ project }) {
           <div className="flex flex-wrap gap-3">
             {project.links?.github && (
               <a
-                className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-500 transition hover:text-brand-600 hover:underline dark:text-brand-400"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-500 transition hover:text-brand-600 hover:underline"
                 href={project.links.github}
                 target="_blank"
                 rel="noreferrer"
@@ -69,7 +69,7 @@ export function ProjectCard({ project }) {
             )}
             {project.links?.demo && (
               <a
-                className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-500 transition hover:text-brand-600 hover:underline dark:text-brand-400"
+                className="inline-flex items-centers gap-1.5 text-sm font-medium text-brand-500 transition hover:text-brand-600 hover:underline"
                 href={project.links.demo}
                 target="_blank"
                 rel="noreferrer"
@@ -86,13 +86,13 @@ export function ProjectCard({ project }) {
                   key={img}
                   src={img}
                   alt=""
-                  className="h-16 w-16 cursor-pointer rounded-lg border-2 border-slate-200/70 object-cover transition-all hover:border-brand-400 hover:shadow-md dark:border-slate-700 dark:hover:border-brand-500"
+                  className="h-16 w-16 cursor-pointer rounded-lg border-2 border-slate-200/70 object-cover transition-all hover:border-brand-400 hover:shadow-md"
                   loading="lazy"
                   onClick={() => openLightbox(idx + 1)}
                 />
               ))}
               {project.images.length > 4 && (
-                <div className="flex h-16 w-16 items-center justify-center rounded-lg border-2 border-slate-200/70 bg-slate-100 text-xs font-semibold text-slate-600 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-400">
+                <div className="flex h-16 w-16 items-center justify-center rounded-lg border-2 border-slate-200/70 bg-slate-100 text-xs font-semibold text-slate-600">
                   +{project.images.length - 4}
                 </div>
               )}

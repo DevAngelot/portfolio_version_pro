@@ -28,9 +28,9 @@ export function PipelineViz() {
               <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-500/10 text-brand-500">
                 <Icon size={18} />
               </span>
-              <p className="text-sm font-semibold text-slate-900 dark:text-slate-50">{s.title}</p>
+              <p className="text-sm font-semibold text-slate-900">{s.title}</p>
             </div>
-            <p className="text-xs leading-relaxed text-slate-600 dark:text-slate-200">{s.desc}</p>
+            <p className="text-xs leading-relaxed text-slate-600">{s.desc}</p>
           </motion.div>
         )
       })}

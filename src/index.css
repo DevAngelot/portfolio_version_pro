@@ -8,14 +8,6 @@
   body {
     @apply bg-slate-50 text-slate-900 antialiased;
   }
-
-  html.dark body {
-    @apply bg-slate-950 text-slate-200 antialiased;
-  }
-
-  html.dark {
-    color-scheme: dark;
-  }
 }
 
 @layer utilities {
@@ -27,27 +19,7 @@
     @apply rounded-2xl border border-slate-200/70 bg-white/70 shadow-sm backdrop-blur;
   }
 
-  html.dark .card {
-    @apply bg-slate-900 border-slate-800;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-  }
-  
-  html.dark .card p,
-  html.dark .card label,
-  html.dark .card a:not(.bg-brand-500) {
-    color: rgb(226 232 240);
-  }
-  
-  html.dark .card:hover {
-    @apply border-slate-700;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-  }
-
   .shadow-glow {
     box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25), 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  html.dark .shadow-glow {
-    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.2);
   }
 }

@@ -50,7 +50,7 @@ function App() {
                   initial={{ opacity: 0, y: 18 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, ease: 'easeOut' }}
-                  className="text-4xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-5xl"
+                  className="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl"
                 >
                   {person.name}
                 </motion.h1>
@@ -69,10 +69,10 @@ function App() {
                   />
                 </div>
 
-                <p className="mt-6 max-w-2xl text-base leading-relaxed text-slate-600 dark:text-slate-200 sm:text-lg">
+                <p className="mt-6 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
                   {person.title}
                 </p>
-                <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-700 dark:text-slate-100">
+                <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-700">
                   {person.tagline}
                 </p>
 
@@ -85,7 +85,7 @@ function App() {
                   </Button>
                 </div>
 
-                <div className="mt-7 flex flex-wrap gap-4 text-sm text-slate-600 dark:text-slate-200">
+                <div className="mt-7 flex flex-wrap gap-4 text-sm text-slate-600">
                   
                   <a className="inline-flex items-center gap-2 hover:underline" href={`mailto:${person.email}`}>
                     <Mail size={16} className="text-brand-500" /> {person.email}
@@ -107,27 +107,27 @@ function App() {
 
               <div className="lg:col-span-5">
                 <div className="card p-6">
-                  <p className="text-sm font-semibold text-slate-900 dark:text-slate-50">DevOps Mindset</p>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-200">
+                  <p className="text-sm font-semibold text-slate-900">DevOps Mindset</p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">
                     I focus on repeatable deployments, infrastructure as code, safe automation, and observability that
                     keeps systems reliable under real-world load.
                   </p>
                   <div className="mt-6 grid gap-3">
-                    <div className="rounded-2xl border border-slate-200/70 bg-white/60 p-4 dark:border-slate-700 dark:bg-slate-800">
+                    <div className="rounded-2xl border border-slate-200/70 bg-white/60 p-4">
                       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-500/90">CI/CD</p>
-                      <p className="mt-2 text-sm text-slate-700 dark:text-slate-300">GitLab CI/CD • Jenkins • Github Actions </p>
+                      <p className="mt-2 text-sm text-slate-700">GitLab CI/CD • Jenkins • Github Actions </p>
                     </div>
-                    <div className="rounded-2xl border border-slate-200/70 bg-white/60 p-4 dark:border-slate-700 dark:bg-slate-800">
+                    <div className="rounded-2xl border border-slate-200/70 bg-white/60 p-4">
                       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-500/90">IaC</p>
-                      <p className="mt-2 text-sm text-slate-700 dark:text-slate-300">Terraform • Ansible </p>
+                      <p className="mt-2 text-sm text-slate-700">Terraform • Ansible </p>
                     </div>
-                    <div className="rounded-2xl border border-slate-200/70 bg-white/60 p-4 dark:border-slate-700 dark:bg-slate-800">
+                    <div className="rounded-2xl border border-slate-200/70 bg-white/60 p-4">
                       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-500/90">Observability</p>
-                      <p className="mt-2 text-sm text-slate-700 dark:text-slate-300">Prometheus • Grafana • Loki • Promtail</p>
+                      <p className="mt-2 text-sm text-slate-700">Prometheus • Grafana • Loki • Promtail</p>
                     </div>
-                    <div className="rounded-2xl border border-slate-200/70 bg-white/60 p-4 dark:border-slate-700 dark:bg-slate-800">
+                    <div className="rounded-2xl border border-slate-200/70 bg-white/60 p-4">
                       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-500/90">Cloud Computing</p>
-                      <p className="mt-2 text-sm text-slate-700 dark:text-slate-300">AWS • AZURE</p>
+                      <p className="mt-2 text-sm text-slate-700">AWS • AZURE</p>
                     </div>
                   </div>
                 </div>
@@ -146,7 +146,7 @@ function App() {
 
         <Section id="about" eyebrow="Profile" title={about.heading}>
           <div className="card p-6 sm:p-8">
-            <p className="whitespace-pre-line text-sm leading-relaxed text-slate-700 dark:text-slate-100 sm:text-base">
+            <p className="whitespace-pre-line text-sm leading-relaxed text-slate-700 sm:text-base">
               {about.body}
             </p>
           </div>
@@ -156,12 +156,12 @@ function App() {
           <div className="grid gap-4 lg:grid-cols-2">
             {skillGroups.map((g) => (
               <div key={g.title} className="card p-6">
-                <p className="text-sm font-semibold text-slate-900 dark:text-slate-50">{g.title}</p>
+                <p className="text-sm font-semibold text-slate-900">{g.title}</p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {g.items.map((s) => (
                     <span
                       key={s}
-                      className="rounded-full border border-slate-200 bg-white/60 px-3 py-1 text-xs text-slate-700 dark:border-[#2B4C7E]/55 dark:bg-[#0D1B34]/88 dark:text-slate-100"
+                      className="rounded-full border border-slate-200 bg-white/60 px-3 py-1 text-xs text-slate-700"
                     >
                       {s}
                     </span>
@@ -177,13 +177,13 @@ function App() {
             {experience.map((e) => (
               <div key={`${e.company}-${e.role}`} className="card p-6">
                 <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
-                  <p className="text-base font-semibold text-slate-900 dark:text-slate-50">
+                  <p className="text-base font-semibold text-slate-900">
                     {e.role} — {e.company}
                   </p>
-                  <p className="text-sm text-slate-600 dark:text-slate-200">{e.date}</p>
+                  <p className="text-sm text-slate-600">{e.date}</p>
                 </div>
-                <p className="mt-1 text-sm text-slate-600 dark:text-slate-200">{e.location}</p>
-                <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-slate-700 dark:text-slate-100">
+                <p className="mt-1 text-sm text-slate-600">{e.location}</p>
+                <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-slate-700">
                   {e.bullets.map((b) => (
                     <li key={b}>{b}</li>
                   ))}
@@ -232,57 +232,57 @@ function App() {
         <Section id="contact" eyebrow="Let’s build" title="Contact">
           <div className="grid gap-4 lg:grid-cols-2">
             <div className="card p-6">
-              <p className="text-sm font-semibold text-slate-900 dark:text-slate-50">Reach out</p>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-200">
+              <p className="text-sm font-semibold text-slate-900">Reach out</p>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600">
                 If you want a DevOps-first delivery pipeline, automation strategy, or infrastructure design, send a
                 message.
               </p>
 
               <div className="mt-5 grid gap-3 text-sm">
-                <a className="inline-flex items-center gap-2 text-slate-700 hover:underline dark:text-slate-100" href={`mailto:${person.email}`}>
+                <a className="inline-flex items-center gap-2 text-slate-700 hover:underline" href={`mailto:${person.email}`}>
                   <Mail size={16} className="text-brand-500" /> {person.email}
                 </a>
-                <a className="inline-flex items-center gap-2 text-slate-700 hover:underline dark:text-slate-100" href={`tel:${person.phone.replace(/\s/g, '')}`}>
+                <a className="inline-flex items-center gap-2 text-slate-700 hover:underline" href={`tel:${person.phone.replace(/\s/g, '')}`}>
                   <Phone size={16} className="text-brand-500" /> {person.phone}
                 </a>
-                <a className="inline-flex items-center gap-2 text-slate-700 hover:underline dark:text-slate-100" href={person.links.linkedin} target="_blank" rel="noreferrer">
+                <a className="inline-flex items-center gap-2 text-slate-700 hover:underline" href={person.links.linkedin} target="_blank" rel="noreferrer">
                   <Linkedin size={16} className="text-brand-500" /> LinkedIn
                 </a>
-                <a className="inline-flex items-center gap-2 text-slate-700 hover:underline dark:text-slate-100" href={person.links.github} target="_blank" rel="noreferrer">
+                <a className="inline-flex items-center gap-2 text-slate-700 hover:underline" href={person.links.github} target="_blank" rel="noreferrer">
                   <Github size={16} className="text-brand-500" /> GitHub
                 </a>
-                <a className="inline-flex items-center gap-2 text-slate-700 hover:underline dark:text-slate-100" href={person.links.gitlab} target="_blank" rel="noreferrer">
+                <a className="inline-flex items-center gap-2 text-slate-700 hover:underline" href={person.links.gitlab} target="_blank" rel="noreferrer">
                   <Gitlab size={16} className="text-brand-500" /> GitLab
                 </a>
-                <a className="inline-flex items-center gap-2 text-slate-700 hover:underline dark:text-slate-100" href={person.links.medium} target="_blank" rel="noreferrer">
+                <a className="inline-flex items-center gap-2 text-slate-700 hover:underline" href={person.links.medium} target="_blank" rel="noreferrer">
                   <BookOpen size={16} className="text-brand-500" /> Medium
                 </a>
               </div>
             </div>
 
-            <div className="rounded-2xl border border-slate-200/70 bg-white/70 p-6 shadow-sm backdrop-blur dark:border-slate-800 dark:bg-slate-900">
+            <div className="rounded-2xl border border-slate-200/70 bg-white/70 p-6 shadow-sm backdrop-blur">
               <form onSubmit={handleSubmit(onSubmit)} className="grid gap-3">
                 <div>
-                  <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">Name</label>
+                  <label className="text-xs font-semibold text-slate-700">Name</label>
                   <input
-                    className="mt-1 w-full rounded-xl border border-slate-200 bg-white/70 px-4 py-2 text-sm text-slate-900 outline-none transition focus:border-brand-500/50 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:placeholder:text-slate-500 dark:focus:border-brand-500"
+                    className="mt-1 w-full rounded-xl border border-slate-200 bg-white/70 px-4 py-2 text-sm text-slate-900 outline-none transition focus:border-brand-500/50"
                     placeholder="Your name"
                     {...register('name', { required: true })}
                   />
                 </div>
                 <div>
-                  <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">Email</label>
+                  <label className="text-xs font-semibold text-slate-700">Email</label>
                   <input
-                    className="mt-1 w-full rounded-xl border border-slate-200 bg-white/70 px-4 py-2 text-sm text-slate-900 outline-none transition focus:border-brand-500/50 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:placeholder:text-slate-500 dark:focus:border-brand-500"
+                    className="mt-1 w-full rounded-xl border border-slate-200 bg-white/70 px-4 py-2 text-sm text-slate-900 outline-none transition focus:border-brand-500/50"
                     placeholder="you@email.com"
                     type="email"
                     {...register('email', { required: true })}
                   />
                 </div>
                 <div>
-                  <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">Message</label>
+                  <label className="text-xs font-semibold text-slate-700">Message</label>
                   <textarea
-                    className="mt-1 min-h-28 w-full resize-y rounded-xl border border-slate-200 bg-white/70 px-4 py-2 text-sm text-slate-900 outline-none transition focus:border-brand-500/50 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:placeholder:text-slate-500 dark:focus:border-brand-500"
+                    className="mt-1 min-h-28 w-full resize-y rounded-xl border border-slate-200 bg-white/70 px-4 py-2 text-sm text-slate-900 outline-none transition focus:border-brand-500/50"
                     placeholder="Tell me what you want to build..."
                     {...register('message', { required: true })}
                   />
@@ -299,9 +299,9 @@ function App() {
         </Section>
       </main>
 
-      <footer className="border-t border-slate-200/70 py-10 dark:border-slate-800">
+      <footer className="border-t border-slate-200/70 py-10">
         <div className="container-page flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-sm text-slate-600 dark:text-slate-200">
+          <p className="text-sm text-slate-600">
             &copy; {new Date().getFullYear()} {person.name}. All rights reserved.
           </p>
           <div className="flex items-center gap-3">
@@ -309,7 +309,7 @@ function App() {
               href={person.links.github}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white"
+              className="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900"
             >
               <Github size={18} />
             </a>
@@ -317,7 +317,7 @@ function App() {
               href={person.links.gitlab}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white"
+              className="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900"
             >
               <Gitlab size={18} />
             </a>
@@ -325,7 +325,7 @@ function App() {
               href={person.links.linkedin}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white"
+              className="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900"
             >
               <Linkedin size={18} />
             </a>
@@ -333,13 +333,13 @@ function App() {
               href={person.links.medium}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white"
+              className="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900"
             >
               <BookOpen size={18} />
             </a>
             <a
               href={`mailto:${person.email}`}
-              className="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white"
+              className="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900"
             >
               <Mail size={18} />
             </a>

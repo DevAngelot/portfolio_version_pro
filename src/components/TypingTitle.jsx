@@ -28,7 +28,7 @@ export function TypingTitle({ lines = [], speed = 28, pause = 1200, className = 
   }, [text, speed, pause])
 
   return (
-    <p className={`font-mono text-xs text-slate-600 dark:text-slate-200 sm:text-sm ${className}`}>
+    <p className={`font-mono text-xs text-slate-600 sm:text-sm ${className}`}>
       <span className="text-brand-500">$</span> {value}
       <span className="ml-1 inline-block w-2 animate-pulse rounded-sm bg-brand-500/80 align-middle">&nbsp;</span>
     </p>

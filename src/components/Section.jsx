@@ -16,7 +16,7 @@ export function Section({ id, eyebrow, title, children }) {
               {eyebrow}
             </p>
           ) : null}
-          <h2 className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-50 sm:text-3xl">
+          <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
             {title}
           </h2>
         </motion.div>

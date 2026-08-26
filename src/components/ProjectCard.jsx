@@ -1,114 +1,20 @@
-import { useState } from 'react'
-import { ExternalLink, Github, Images } from 'lucide-react'
-import { ImageLightbox } from './ImageLightbox.jsx'
+import { ExternalLink, Github } from 'lucide-react'
 
 function Tag({ children }) {
-  return (
-    <span className="rounded-full border border-slate-200 bg-white/60 px-3 py-1 text-xs text-slate-700">
-      {children}
-    </span>
-  )
+  return <span className="border-b border-slate-300 pb-1 text-xs text-slate-600">{children}</span>
 }
 
 export function ProjectCard({ project }) {
-  const [lightboxOpen, setLightboxOpen] = useState(false)
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
-  const cover = project.images?.[0]
-
-  const openLightbox = (index) => {
-    setCurrentImageIndex(index)
-    setLightboxOpen(true)
-  }
-
-  return (
-    <>
-      <article className="group card overflow-hidden transition-all duration-300 hover:shadow-lg">
-        <div className="relative overflow-hidden">
-          <div className="relative bg-gradient-to-br from-white to-slate-50/50 p-4">
-            {cover ? (
-              <img
-                src={cover}
-                alt={project.title}
-                className="h-48 w-full cursor-pointer rounded-lg border-2 border-slate-200/80 object-contain transition-all duration-300 group-hover:scale-105 group-hover:border-brand-400/40"
-                loading="lazy"
-                onClick={() => openLightbox(0)}
-              />
-            ) : (
-              <div className="flex h-48 w-full items-center justify-center rounded-lg border-2 border-slate-200/80 text-slate-400">
-                <Images size={32} />
-              </div>
-            )}
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-4 p-5">
-          <div className="space-y-2">
-            <h3 className="text-lg font-semibold leading-tight text-slate-900 transition-colors group-hover:text-brand-600">
-              {project.title}
-            </h3>
-            <p className="text-sm leading-relaxed text-slate-600">{project.description}</p>
-          </div>
-
-          <div className="flex flex-wrap gap-2">
-            {project.technologies?.map((t) => (
-              <Tag key={t}>{t}</Tag>
-            ))}
-          </div>
-
-          <div className="flex flex-wrap gap-3">
-            {project.links?.github && (
-              <a
-                className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-500 transition hover:text-brand-600 hover:underline"
-                href={project.links.github}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Github size={16} /> GitHub
-              </a>
-            )}
-            {project.links?.demo && (
-              <a
-                className="inline-flex items-centers gap-1.5 text-sm font-medium text-brand-500 transition hover:text-brand-600 hover:underline"
-                href={project.links.demo}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <ExternalLink size={16} /> Demo
-              </a>
-            )}
-          </div>
-
-          {project.images?.length > 1 && (
-            <div className="flex gap-2">
-              {project.images.slice(1, 4).map((img, idx) => (
-                <img
-                  key={img}
-                  src={img}
-                  alt=""
-                  className="h-16 w-16 cursor-pointer rounded-lg border-2 border-slate-200/70 object-cover transition-all hover:border-brand-400 hover:shadow-md"
-                  loading="lazy"
-                  onClick={() => openLightbox(idx + 1)}
-                />
-              ))}
-              {project.images.length > 4 && (
-                <div className="flex h-16 w-16 items-center justify-center rounded-lg border-2 border-slate-200/70 bg-slate-100 text-xs font-semibold text-slate-600">
-                  +{project.images.length - 4}
-                </div>
-              )}
-            </div>
-          )}
-        </div>
-      </article>
-
-      {lightboxOpen && (
-        <ImageLightbox
-          images={project.images}
-          currentIndex={currentImageIndex}
-          onClose={() => setLightboxOpen(false)}
-          onNavigate={setCurrentImageIndex}
-        />
-      )}
-    </>
-  )
+  return <article className="group card flex h-full flex-col p-7 transition-all duration-300 hover:border-[#d88a5b]">
+    <div className="space-y-3">
+      {project.date && <p className="text-xs font-bold uppercase tracking-[.18em] text-[#a6532f]">{project.date}</p>}
+      <h3 className="text-xl font-bold leading-tight text-slate-950">{project.title}</h3>
+      <p className="text-sm leading-7 text-slate-600">{project.description}</p>
+    </div>
+    <div className="mt-5 flex flex-wrap gap-2">{project.technologies?.map(t => <Tag key={t}>{t}</Tag>)}</div>
+    <div className="mt-auto flex flex-wrap gap-3 pt-6">
+      {project.links?.github && <a className="inline-flex items-center gap-2 border-b border-slate-400 pb-1 text-sm font-bold text-slate-800 transition hover:border-[#a6532f] hover:text-[#a6532f]" href={project.links.github} target="_blank" rel="noreferrer"><Github size={16} />Code source</a>}
+      {project.links?.demo && <a className="inline-flex items-center gap-2 border-b-2 border-[#a6532f] pb-1 text-sm font-bold text-[#7f3f24] transition hover:text-[#b85e36]" href={project.links.demo} target="_blank" rel="noreferrer">Voir le projet <ExternalLink size={16} /></a>}
+    </div>
+  </article>
 }

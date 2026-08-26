@@ -1,263 +1,58 @@
 export const person = {
-  name: 'ANGELOT MPATA',
-  title:
-    'DevOps Engineer | Docker • Kubernetes • Terraform • Ansible • Jenkins • GitLab CI/CD • Grafana • Prometheus | Linux System Administrator | Full-Stack Developer',
-  location: 'Kinshasa, Democratic Republic of the Congo',
-  tagline: 'Building scalable, automated, and resilient systems.',
-  email: 'contact@angelotmpata.net',
-  phone: '+243 999234997',
-  website: 'https://angelotmpata.net',
-  links: {
-    linkedin: 'https://www.linkedin.com/in/angelot-mpata-61a94b344',
-    github: 'https://github.com/DevAngelot',
-    gitlab: 'https://gitlab.com/DevAngelot',
-    medium: 'https://medium.com/@angelotmpata',
-  },
+  name: 'Angelot Mpata', title: 'Ingénieur Cloud & DevOps', secondaryTitle: 'Développeur Full-Stack',
+  location: 'Kinshasa, République démocratique du Congo',
+  tagline: 'J’automatise les infrastructures, fiabilise les déploiements et transforme des idées en produits web performants.',
+  email: 'contact@angelotmpata.net', phone: '+243 999 234 997', website: 'https://angelotmpata.net',
+  links: { linkedin: 'https://www.linkedin.com/in/angelot-mpata-61a94b344/', github: 'https://github.com/DevAngelot', gitlab: 'https://gitlab.com/DevAngelot', medium: 'https://medium.com/@angelotmpata' },
 }
 
 export const about = {
-  heading: 'About me',
-  body: `Angelot Mpata is a passionate DevOps Engineer with a strong foundation in Linux systems administration, networking, and cloud computing. He specializes in designing and implementing scalable, secure, and automated infrastructures using modern DevOps tools and practices.
+  heading: 'Cloud, automatisation et développement réunis',
+  body: `Ingénieur Cloud & DevOps et développeur Full-Stack, certifié AWS Cloud Practitioner (CLF-C02) et Microsoft Azure Fundamentals (AZ-900), je conçois des infrastructures automatisées et des applications web prêtes pour la production.
 
-With hands-on experience in Docker, Kubernetes, Terraform, and Ansible, he focuses on Infrastructure as Code (IaC), CI/CD automation, and system reliability. He has worked on deploying full-stack applications using GitLab CI/CD pipelines, containerization, and cloud-based environments.
-
-His background in full-stack development (React, Node.js, PostgreSQL) allows him to bridge the gap between development and operations, ensuring efficient collaboration and faster delivery cycles.
-
-He is also experienced in monitoring and observability using Prometheus, Grafana, and centralized logging tools, ensuring system performance and uptime.
-
-Driven by continuous learning, he is currently deepening his expertise in cloud platforms and distributed systems.`,
+Ma double compétence en développement et en exploitation me permet d’intervenir sur tout le cycle de vie d’un produit : conception, conteneurisation, intégration continue, déploiement cloud, supervision et amélioration continue. J’accorde une attention particulière à la sécurité, à la reproductibilité et à la qualité de l’expérience utilisateur.`,
 }
 
+export const stats = [{ value: '2', label: 'certifications Cloud' }, { value: '5+', label: 'projets concrets' }, { value: 'Cloud + Web', label: 'double expertise' }]
+
 export const skillGroups = [
-  {
-    title: 'DevOps',
-    items: [
-      'Docker',
-      'Kubernetes',
-      'Terraform',
-      'Ansible',
-      'Jenkins',
-      'GitLab CI/CD',
-    ],
-  },
-  {
-    title: 'Cloud',
-    items: ['AWS (EC2, S3, IAM, Cloud fundamentals)', 'AZURE (Virtual Machines, Storage, Networking)'],
-  },
-  {
-    title: 'Monitoring',
-    items: ['Prometheus', 'Grafana', 'Loki', 'Promtail'],
-  },
-  {
-    title: 'Backend',
-    items: ['Node.js', 'Goland'],
-  },
-  {
-    title: 'Frontend',
-    items: ['React.js', 'HTML', 'CSS', 'JavaScript'],
-  },
-  {
-    title: 'Databases',
-    items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'SQL Server'],
-  },
-  {
-    title: ' Operating System',
-    items: ['Windows', 'Ubuntu', 'Debian', 'Amazon Linux', 'Red Hat'],
-  },
-  {
-    title: 'Others',
-    items: ['Git', 'Agile', 'REST APIs', 'Cybersecurity basics'],
-  },
+  { title: 'DevOps & automatisation', items: ['Docker', 'Kubernetes', 'Terraform', 'Ansible', 'Jenkins', 'GitLab CI/CD'] },
+  { title: 'Cloud Computing', items: ['Amazon Web Services (AWS)', 'Microsoft Azure', 'IAM', 'VPC', 'Azure Monitor'] },
+  { title: 'Monitoring & observabilité', items: ['Prometheus', 'Grafana', 'Loki', 'Azure Monitor & Insights'] },
+  { title: 'Développement', items: ['React.js', 'Node.js', 'Go', 'Python', 'API REST'] },
+  { title: 'Bases de données', items: ['PostgreSQL', 'MySQL', 'MongoDB', 'SQL Server'] },
+  { title: 'Systèmes & méthodes', items: ['Linux', 'Ubuntu', 'Debian', 'Red Hat', 'Windows', 'Agile / Scrum'] },
 ]
 
 export const experience = [
-  {
-    role: 'Frontend Developer',
-    company: 'IZZY SIGN',
-    date: 'Mar 2025 – Jul 2025',
-    location: 'Kinshasa',
-    bullets: [
-      'Developed responsive web interfaces using React.js',
-      'Integrated REST APIs with backend systems',
-      'Improved performance and user experience',
-      'Worked in Agile environment using Git',
-    ],
-  },
-  {
-    role: 'Programme AWS RE/START CLOUD COMPUTING',
-    company: 'Orange Digital Center',
-    date: 'Feb . 2026 – Now',
-    location: 'Kinshasa',
-    bullets: [
-      'AWS re/Start program for becoming a cloud practionner, combined with the AWS Certified Cloud Practitioner certification.',
-      'Fundamental of networking',
-      'Fundamental of cybersecurity',
-      'Fundamental of linux',
-      'Fundamental of Python',
-      'Fundamental of DevOps',
-      'Aws re/Start Badge : En cours',
-      'References :',  
-      'MARC TSHIBANGU : Head of Orange Digital Center marc.tshibasu@orange.com ',
-      'JEAN GILBERT MBOMA : AWS Re-start Program Manager mbula.gilberto@gmail.com'
-    ],
-  }
+  { role: 'Software Engineer & Project Management Officer (PMO)', company: 'Beni Futur', date: 'Août 2026 — Présent', location: 'Kinshasa', bullets: ['Conception, développement et déploiement de solutions web et plateformes digitales.', 'Pilotage et suivi de projets selon la méthodologie Agile/Scrum.', 'Coordination des équipes avec Jira, Microsoft Planner et Trello.'] },
+  { role: 'Ingénieur Cloud & DevOps — Stage', company: 'Orange Digital Center RDC', date: 'Fév. 2026 — Juin 2026', location: 'Kinshasa', bullets: ['Mise en œuvre de solutions Cloud & DevOps.', 'Administration Linux, réseaux, conteneurisation Docker et automatisation CI/CD.', 'Déploiement d’infrastructures Cloud avec AWS et Terraform.'] },
+  { role: 'Développeur Frontend', company: 'IZZY SIGN', date: 'Mars 2025 — Juil. 2025', location: 'Kinshasa', bullets: ['Développement d’interfaces web responsives avec React.js.', 'Intégration d’API REST et optimisation des performances et de l’expérience utilisateur.'] },
 ]
 
-
-
-
 export const projects = [
-  {
-    title: 'Production-Ready DevOps Pipeline for a Full-Stack Application',
-    description:
-      'Designed and deployed a full-stack application using modern DevOps practices, covering the full lifecycle from infrastructure provisioning to monitoring. Key Achievements: Built a fully automated infrastructure using Terraform and Ansible on AWS EC2, Containerized the application with Docker and deployed via CI/CD pipelines (GitLab CI), Configured a secure reverse proxy with NGINX and HTTPS using Certbot, Configured a secure reverse proxy with NGINX and HTTPS using Certbot, Ensured reproducibility and scalability of the infrastructure',
-    technologies: ['AWS EC2', 'Terraform', 'Ansible', 'Docker', 'GitLab CI/CD', 'NGINX', 'Prometheus', 'Grafana', 'React.js', 'Typescript', 'Supabase'],
-    
-    images: ['/d2.png', '/d1.png', '/d3.png', '/d4.png', '/d5.png', '/d6.png', '/d7.png', '/d8.png', '/d9.png'],
-  },
-  {
-    title: 'Multi-Tier AWS Infrastructure with Terraform',
-    description:
-      'Designed and deployed a secure and scalable cloud infrastructure on AWS using Infrastructure as Code (Terraform), following best practices for networking, security, and access management. Key Features: Custom VPC with public and private subnets, Internet Gateway and NAT Gateway for controlled internet access, Secure access using AWS Systems Manager (SSM) without SSH, IAM roles configured for fine-grained permissions, Network isolation and security groups implementation',
-    technologies: ['AWS EC2', 'VPC', 'IAM', 'SSM', 'Networking', 'Security'],
-    
-    images: ['/t2.png', '/t1.png', '/t3.png', '/t4.png'],
-  },
-  {
-    title: 'Hospital Cash Flow Management Application',
-    description:
-      'A centralized financial system for hospital cash flow and reporting, built with a DevOps-first approach (automation, repeatable deployments, and observability-minded delivery).',
-    technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL'],
-    
-    images: ['/cash_flow.png'],
-  },
-  {
-    title: 'Complete Hospital Management System (Nomargueri)',
-    description:
-      'Full-stack hospital management platform with GitLab CI/CD pipelines, dockerized services, automated server configuration with Ansible, and deployment on Ubuntu (Contabo).',
-    technologies: ['GitLab CI/CD', 'Docker', 'Ansible', 'Ubuntu', 'Full-stack'],
-    
-    images: ['/hopital_management.png'],
-  },
-  {
-    title: 'POS Application',
-    description:
-      'A stock and transaction management POS system with an admin dashboard and core operational workflows for inventory and sales.',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
-    
-    images: ['/project-placeholder-3.svg'],
-  },
-  {
-    title: 'Cloud Project: AWS S3 Bucket Solution (CHR Libikisi)',
-    description:
-      'An AWS S3 storage solution designed for secure storage and management of hospital financial reports, with cloud fundamentals and IAM-first access control mindset.',
-    technologies: ['AWS S3', 'IAM', 'Cloud fundamentals'],
-    
-    images: ['/s3_bucket.jpg'],
-  },
+  { title: 'Marketplace e-commerce avancée — Beni Futur', date: 'Août 2026', description: 'Conception et développement full-stack d’une marketplace avancée, déployée sur Microsoft Azure avec un pipeline CI/CD complet automatisant l’intégration, les tests et le déploiement.', technologies: ['React', 'Full-Stack', 'Microsoft Azure', 'CI/CD'], links: { demo: 'https://benifutur.com/' } },
+  { title: 'Gestion des flux de trésorerie — CH-R Libikisi', date: 'Janvier 2026', description: 'Application de gestion financière hospitalière appuyée par une infrastructure AWS sécurisée et scalable avec Terraform, VPC personnalisé, sous-réseaux publics et privés, IAM et accès SSM sans SSH.', technologies: ['AWS', 'Terraform', 'VPC', 'IAM', 'AWS SSM'], links: { demo: 'https://chr-libikisi.org/' } },
+  { title: 'Site web & plateforme de gestion — CCCN', date: 'Juin 2026', description: 'Plateforme web complète pour le Centre Chrétien Cantiques Nouveau, comprenant un site vitrine moderne, un espace membres et une interface d’administration.', technologies: ['React', 'Node.js', 'Administration', 'Web responsive'], links: { demo: 'https://ccc-n.org/' } },
+  { title: 'Paiement de factures médicales — Becky', date: 'Avril 2026', description: 'Application permettant aux patients de régler leurs factures via M-Pesa, Orange Money, Airtel Money et Afrimoney, avec suivi sécurisé et interfaces dédiées.', technologies: ['Mobile Money', 'Sécurité', 'Full-Stack', 'Paiement'], links: { demo: 'https://app-becky.angelotmpata.net/login' } },
+  { title: 'Pipeline DevOps CI/CD — Beni Futur', date: 'Août 2026', description: 'Pipeline automatisant l’intégration et le déploiement du site et de la plateforme d’administration sur un VPS Ubuntu, pour des mises en production rapides, fiables et reproductibles.', technologies: ['GitLab CI/CD', 'Docker', 'Ubuntu', 'VPS', 'Automatisation'], links: { demo: 'https://benifutur.org/' } },
 ]
 
 export const certifications = [
-  {
-    title: 'AWS Cloud Practitioner Essentials',
-    credentialUrl: '#',
-    image: '/practionner.png',
-    badge: 'Credly',
-  },
-  {
-    title: 'AWS Technical Essentials',
-    credentialUrl: '#',
-    image: '/essantials.png',
-    badge: 'Credly',
-  },
-  {
-    title: 'Docker Foundations',
-    credentialUrl: 'https://www.linkedin.com/learning/certificates/c68477b683fcf4bc6287b717d8d680a417fdf8bf0e6d79fc0e4ac7fbbc2e87f0?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B8G06rPE9QwS%2Bm4GFbzCKDw%3D%3D',
-    image: '/docker.png',
-    badge: 'Badge',
-  },
-  {
-    title: 'Terraform for AWS',
-    credentialUrl: 'https://www.linkedin.com/learning/certificates/0fb41548ccfeea6e97bbb9d2343546c148f2969d3319fb4ae2176425d805ba17?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B8G06rPE9QwS%2Bm4GFbzCKDw%3D%3D',
-    image: '/terraform.png',
-    badge: 'Badge',
-  },
-  {
-    title: 'Cisco Networking Devices and Initial Configuration',
-    credentialUrl: 'https://www.credly.com/badges/83dae4f5-5a91-41c6-b3a8-3eb1b6f9fc00/linked_in_profile',
-    image: '/networking_device.png',
-    badge: 'Badge',
-  },
-  {
-    title: 'Cisco Linux Essentials',
-    credentialUrl: 'https://www.credly.com/badges/1c1523f8-17bc-49c9-9d78-3b144504cd4f',
-    image: '/linux_essantials.png',
-    badge: 'Badge',
-  },
-  {
-    title: 'Cisco Introduction to Cybersecurity',
-    credentialUrl: 'https://www.credly.com/badges/25faf7ce-d1f3-4ffc-a3c1-e5ca49f0a6d6',
-    image: '/cybersecurite.png',
-    badge: 'Badge',
-  },
-  {
-    title: 'Cisco Networking Basics',
-    credentialUrl: 'https://www.credly.com/badges/22b52c3d-1536-4b13-b661-f54a23ba8abb',
-    image: '/networking_basics.png',
-    badge: 'Badge',
-  },
-   {
-    title: 'SQL Server Database Administration',
-    credentialUrl: 'https://www.udemy.com/certificate/UC-30009aee-40e5-432f-a68d-92763e853bad/',
-    image: '/udemy.png',
-    badge: 'Badge',
-  },
+  { title: 'AWS Certified Cloud Practitioner (CLF-C02)', credentialUrl: 'https://www.credly.com/badges/8f4ab8ae-f9a6-44b9-b09b-cb9b7a9a772c/linked_in_profile', badge: 'AWS' },
+  { title: 'Microsoft Certified: Azure Fundamentals (AZ-900)', credentialUrl: 'https://learn.microsoft.com/en-us/users/angelotmpatabugslayer-8105/credentials/85ac982250cf9dcf', image: '/essantials.png', badge: 'Microsoft' },
+  { title: 'AWS re/Start Graduate', credentialUrl: 'https://www.credly.com/badges/2217a61d-b91e-4c6c-8eaa-6c03e3a2443a/linked_in_profile', image: '/terraform.png', badge: 'AWS re/Start' },
+  { title: 'Docker Foundations Professional Certificate', credentialUrl: 'https://www.linkedin.com/learning/certificates/c68477b683fcf4bc6287b717d8d680a417fdf8bf0e6d79fc0e4ac7fbbc2e87f0', image: '/docker.png', badge: 'Docker' },
+  { title: 'Administration de bases de données SQL Server', credentialUrl: 'https://www.udemy.com/certificate/UC-30009aee-40e5-432f-a68d-92763e853bad/', image: '/udemy.png', badge: 'Udemy' },
+  { title: 'Authentication & Authorization for Web/API', credentialUrl: 'https://www.credly.com/badges/4f785a55-e96b-468d-a52d-82443e1c967e', badge: 'The Linux Foundation' },
+  { title: 'XSS Exploits and Defenses', credentialUrl: 'https://www.credly.com/badges/35e6b504-349b-48d2-bf24-38f3d990d3c6', badge: 'The Linux Foundation' },
+  { title: 'Introduction to Linux', credentialUrl: null, badge: 'The Linux Foundation' },
 ]
 
 export const education = [
-  {
-    title: 'Master, Computer Software Engineering',
-    org: 'ISIPA',
-    period: 'Nov 2024 - Aug 2026',
-    grade: 'In Progress',
-    description: 'Skills: DevOps · Professional Software Design · Methods Development · Software Design Methodology · Software Design Standards',
-  },
-  {
-    title: 'AWS RE/START CLOUD COMPUTING Program, Cloud Computing, DevOps & Linux',
-    org: 'Orange Digital Center RDC',
-    period: 'Feb 2026 - May 2026',
-    description: 'Skills: Cloud Computing, IAAS, PAAS, SAAS, Network Basics, Cybersecurity',
-  },
-  {
-    title: 'Bachelor, Software Engineering',
-    org: 'ISIPA',
-    period: 'Oct 2021 - Aug 2024',
-    grade: '71%',
-    description: 'Skills: Software Development · Object-Oriented Programming · Database Management · Web Development · Software Architecture · Algorithms & Data Structures',
-  },
+  { title: 'Master en Ingénierie Logiciel', org: 'ISIPA Shaumba — Kinshasa', period: '2024 — 2026' },
+  { title: 'Programme AWS re/Start', org: 'Orange Digital Center RDC', period: 'Février 2026 — Juin 2026', description: 'Cloud Computing, DevOps, Linux, réseaux et cybersécurité.' },
+  { title: 'Licence en Génie Logiciel', org: 'ISIPA Shaumba — Kinshasa', period: '2021 — 2024' },
+  { title: 'Diplôme d’État', org: 'Lycée Technique Esengo', period: '2014 — 2020' },
 ]
-
-export const techStackCarousel = [
-  'Docker',
-  'Kubernetes',
-  'Terraform',
-  'Ansible',
-  'Jenkins',
-  'GitLab CI/CD',
-  'GitHub Actions',
-  'AWS',
-  'AZURE',
-  'Linux',
-  'Prometheus',
-  'Grafana',
-  'Loki',
-  'Promtail',
-  'Node.js',
-  'Goland',
-  'React',
-  'PostgreSQL',
-  'MongoDB',
-  'MySQL',
-  'SQL Server',
-  'Redis',
-]
+export const techStackCarousel = ['AWS', 'Azure', 'Docker', 'Kubernetes', 'Terraform', 'Ansible', 'GitLab CI/CD', 'Jenkins', 'Linux', 'Prometheus', 'Grafana', 'React', 'Node.js', 'Go', 'Python', 'PostgreSQL']

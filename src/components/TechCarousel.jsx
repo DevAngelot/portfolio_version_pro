@@ -1,14 +1,12 @@
-import { motion } from 'framer-motion'
+import { motion as Motion } from 'framer-motion'
 
 export function TechCarousel({ items }) {
   const row = [...items, ...items]
 
   return (
-    <div className="relative overflow-hidden rounded-2xl border border-slate-200/70 bg-white/60 p-4">
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white/80 to-transparent" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white/80 to-transparent" />
-      <motion.div
-        className="flex gap-3"
+    <div className="relative overflow-hidden border-y border-white/10 bg-transparent py-4">
+      <Motion.div
+        className="flex items-center gap-8"
         initial={{ x: 0 }}
         animate={{ x: ['0%', '-50%'] }}
         transition={{ duration: 24, ease: 'linear', repeat: Infinity }}
@@ -16,12 +14,12 @@ export function TechCarousel({ items }) {
         {row.map((t, idx) => (
           <div
             key={`${t}-${idx}`}
-            className="whitespace-nowrap rounded-xl border border-slate-200 bg-white/70 px-3 py-2 text-sm text-slate-700 shadow-sm"
+            className="flex items-center gap-8 whitespace-nowrap text-xs font-bold uppercase tracking-[.16em] text-slate-400 after:h-1 after:w-1 after:bg-[#d88a5b] after:content-['']"
           >
             {t}
           </div>
         ))}
-      </motion.div>
+      </Motion.div>
     </div>
   )
 }

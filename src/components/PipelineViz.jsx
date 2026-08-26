@@ -1,13 +1,13 @@
-import { motion } from 'framer-motion'
+import { motion as Motion } from 'framer-motion'
 import { Boxes, Cloud, GitBranch, ShieldCheck, Server, Timer } from 'lucide-react'
 
 const steps = [
-  { title: 'Commit', icon: GitBranch, desc: 'Small, auditable changes with consistent branching.' },
-  { title: 'CI', icon: Timer, desc: 'Automated tests, linting, and build reproducibility.' },
-  { title: 'Build', icon: Boxes, desc: 'Container images and immutable artifacts.' },
-  { title: 'Deploy', icon: Cloud, desc: 'Safe rollouts with IaC and environment parity.' },
-  { title: 'Secure', icon: ShieldCheck, desc: 'Policy, IAM mindset, and least-privilege access.' },
-  { title: 'Observe', icon: Server, desc: 'Metrics, dashboards, alerting, and SLO thinking.' },
+  { title: 'Code', icon: GitBranch, desc: 'Des changements versionnés, lisibles et vérifiables.' },
+  { title: 'Tester', icon: Timer, desc: 'Tests et contrôles qualité exécutés automatiquement.' },
+  { title: 'Construire', icon: Boxes, desc: 'Images conteneurisées et artefacts reproductibles.' },
+  { title: 'Déployer', icon: Cloud, desc: 'Déploiements fiables grâce à l’Infrastructure as Code.' },
+  { title: 'Sécuriser', icon: ShieldCheck, desc: 'Accès maîtrisés et principe du moindre privilège.' },
+  { title: 'Superviser', icon: Server, desc: 'Métriques, tableaux de bord, logs et alertes.' },
 ]
 
 export function PipelineViz() {
@@ -16,7 +16,7 @@ export function PipelineViz() {
       {steps.map((s, idx) => {
         const Icon = s.icon
         return (
-          <motion.div
+          <Motion.div
             key={s.title}
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -31,7 +31,7 @@ export function PipelineViz() {
               <p className="text-sm font-semibold text-slate-900">{s.title}</p>
             </div>
             <p className="text-xs leading-relaxed text-slate-600">{s.desc}</p>
-          </motion.div>
+          </Motion.div>
         )
       })}
     </div>

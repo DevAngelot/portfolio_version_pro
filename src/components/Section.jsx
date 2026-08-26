@@ -1,10 +1,10 @@
-import { motion } from 'framer-motion'
+import { motion as Motion } from 'framer-motion'
 
 export function Section({ id, eyebrow, title, children }) {
   return (
-    <section id={id} className="py-14 sm:py-20">
+    <section id={id} className="relative py-16 sm:py-24">
       <div className="container-page">
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-120px' }}
@@ -12,14 +12,14 @@ export function Section({ id, eyebrow, title, children }) {
           className="mb-8"
         >
           {eyebrow ? (
-            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-500/90">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-[#e5a17a]">
               {eyebrow}
             </p>
           ) : null}
-          <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+          <h2 className="max-w-3xl text-3xl font-black tracking-tight text-white sm:text-4xl">
             {title}
           </h2>
-        </motion.div>
+        </Motion.div>
         {children}
       </div>
     </section>

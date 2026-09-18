@@ -33,7 +33,7 @@ function App() {
           </Motion.div>
           <Motion.div initial={{ opacity: 0, scale: .9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: .7, delay: .15 }} className="relative mx-auto w-full max-w-sm">
             <div className="relative border border-white/15 bg-white/5 p-2 shadow-2xl">
-              <img src="/profil_angelot_mpata.jpg" alt="Portrait d’Angelot Mpata" className="aspect-[3/4] w-full object-cover object-top grayscale-[15%]" />
+              <img src="/angelot.jpg" alt="Portrait d’Angelot Mpata" className="aspect-[3/4] w-full object-cover object-top grayscale-[15%]" />
               <div className="absolute bottom-5 left-5 border-l-2 border-[#d88a5b] bg-[#07111f]/90 px-4 py-3"><p className="font-bold text-white">Basé à Kinshasa, RDC</p><p className="mt-1 text-sm text-slate-300">Cloud • DevOps • Full-Stack</p></div>
             </div>
           </Motion.div>

@@ -27,7 +27,7 @@ function App() {
             <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">{person.tagline}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#projects" className="primary-btn">Découvrir mes projets <ArrowDown size={18} /></a>
-              <a href="/cv_angelot_mpata_lastest_fr.pdf" target="_blank" className="secondary-btn"><Download size={18} /> Télécharger mon CV</a>
+              <a href="/angelotmpata.pdf" target="_blank" className="secondary-btn"><Download size={18} /> Télécharger mon CV</a>
             </div>
             <div className="mt-8 flex flex-wrap gap-3">{socials.map(([url, icon, name]) => <a key={name} href={url} target="_blank" rel="noreferrer" aria-label={name} className="social-btn">{icon}</a>)}</div>
           </Motion.div>

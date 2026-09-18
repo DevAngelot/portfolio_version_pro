@@ -8,7 +8,7 @@ export const person = {
 
 export const about = {
   heading: 'Cloud, automatisation et développement réunis',
-  body: `Ingénieur Cloud & DevOps et développeur Full-Stack, certifié AWS Cloud Practitioner (CLF-C02) et Microsoft Azure Fundamentals (AZ-900), je conçois des infrastructures automatisées et des applications web prêtes pour la production.
+  body: `Ingénieur Cloud & DevOps et développeur Full-Stack, diplômé du programme AWS re/Start et certifié AWS Cloud Practitioner (CLF-C02) et Microsoft Azure Fundamentals (AZ-900), je conçois des infrastructures automatisées et des applications web prêtes pour la production. Je prépare également la certification Microsoft Azure Administrator (AZ-104), en cours d’obtention.
 
 Ma double compétence en développement et en exploitation me permet d’intervenir sur tout le cycle de vie d’un produit : conception, conteneurisation, intégration continue, déploiement cloud, supervision et amélioration continue. J’accorde une attention particulière à la sécurité, à la reproductibilité et à la qualité de l’expérience utilisateur.`,
 }
@@ -34,7 +34,7 @@ export const projects = [
   { title: 'Marketplace e-commerce avancée — Beni Futur', date: 'Août 2026', description: 'Conception et développement full-stack d’une marketplace avancée, déployée sur Microsoft Azure avec un pipeline CI/CD complet automatisant l’intégration, les tests et le déploiement.', technologies: ['React', 'Full-Stack', 'Microsoft Azure', 'CI/CD'], links: { demo: 'https://benifutur.com/' } },
   { title: 'Gestion des flux de trésorerie — CH-R Libikisi', date: 'Janvier 2026', description: 'Application de gestion financière hospitalière appuyée par une infrastructure AWS sécurisée et scalable avec Terraform, VPC personnalisé, sous-réseaux publics et privés, IAM et accès SSM sans SSH.', technologies: ['AWS', 'Terraform', 'VPC', 'IAM', 'AWS SSM'], links: { demo: 'https://chr-libikisi.org/' } },
   { title: 'Site web & plateforme de gestion — CCCN', date: 'Juin 2026', description: 'Plateforme web complète pour le Centre Chrétien Cantiques Nouveau, comprenant un site vitrine moderne, un espace membres et une interface d’administration.', technologies: ['React', 'Node.js', 'Administration', 'Web responsive'], links: { demo: 'https://ccc-n.org/' } },
-  { title: 'Paiement de factures médicales — Becky', date: 'Avril 2026', description: 'Application permettant aux patients de régler leurs factures via M-Pesa, Orange Money, Airtel Money et Afrimoney, avec suivi sécurisé et interfaces dédiées.', technologies: ['Mobile Money', 'Sécurité', 'Full-Stack', 'Paiement'], links: { demo: 'https://app-becky.angelotmpata.net/login' } },
+  { title: 'Application de gestion administrative et financière (CCCN)', date: 'Août 2026', description: 'Application web développée pour le Centre Chrétien Cantique Nouveau, permettant de centraliser la gestion des églises, cellules et départements. Gestion des finances, des budgets, des ordres de paiement et du matériel, avec suivi des validations selon les rôles des utilisateurs. Création et transmission des rapports de culte et d’activités, suivi des projets et génération de documents imprimables.', technologies: ['Gestion administrative', 'Finances', 'Validation par rôles', 'Rapports'], links: { demo: 'https://administration.ccc-n.org' } },
   { title: 'Pipeline DevOps CI/CD — Beni Futur', date: 'Août 2026', description: 'Pipeline automatisant l’intégration et le déploiement du site et de la plateforme d’administration sur un VPS Ubuntu, pour des mises en production rapides, fiables et reproductibles.', technologies: ['GitLab CI/CD', 'Docker', 'Ubuntu', 'VPS', 'Automatisation'], links: { demo: 'https://benifutur.org/' } },
 ]
 
@@ -44,9 +44,9 @@ export const certifications = [
   { title: 'AWS re/Start Graduate', credentialUrl: 'https://www.credly.com/badges/2217a61d-b91e-4c6c-8eaa-6c03e3a2443a/linked_in_profile', image: '/terraform.png', badge: 'AWS re/Start' },
   { title: 'Docker Foundations Professional Certificate', credentialUrl: 'https://www.linkedin.com/learning/certificates/c68477b683fcf4bc6287b717d8d680a417fdf8bf0e6d79fc0e4ac7fbbc2e87f0', image: '/docker.png', badge: 'Docker' },
   { title: 'Administration de bases de données SQL Server', credentialUrl: 'https://www.udemy.com/certificate/UC-30009aee-40e5-432f-a68d-92763e853bad/', image: '/udemy.png', badge: 'Udemy' },
-  { title: 'Authentication & Authorization for Web/API', credentialUrl: 'https://www.credly.com/badges/4f785a55-e96b-468d-a52d-82443e1c967e', badge: 'The Linux Foundation' },
-  { title: 'XSS Exploits and Defenses', credentialUrl: 'https://www.credly.com/badges/35e6b504-349b-48d2-bf24-38f3d990d3c6', badge: 'The Linux Foundation' },
-  { title: 'Introduction to Linux', credentialUrl: null, badge: 'The Linux Foundation' },
+  { title: 'Authentication & Authorization for Web/API', credentialUrl: null, badge: 'The Linux Foundation' },
+  { title: 'XSS Exploits and Defenses', credentialUrl: 'https://www.credly.com/badges/4f785a55-e96b-468d-a52d-82443e1c967e', badge: 'The Linux Foundation' },
+  { title: 'Introduction to Linux', credentialUrl: 'https://www.credly.com/badges/35e6b504-349b-48d2-bf24-38f3d990d3c6', badge: 'The Linux Foundation' },
 ]
 
 export const education = [
